@@ -14,3 +14,4 @@
     - En virtuell miljö är en kopia av en Python-installation som är isolerad från den centrala Python-installationen.
 
 ## Kap2 uppgifter:
+
