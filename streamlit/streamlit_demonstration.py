@@ -1,6 +1,6 @@
 
 # =============================================================================
-# Demonstration of how to make a Streamlit application. 
+# Demonstration of how to make a Streamlit application.
 # Created by Antonio Prgomet.
 # www.linkedin.com/in/antonioprgomet .
 # =============================================================================
@@ -12,16 +12,16 @@ from sklearn.linear_model import LinearRegression
 import streamlit as st
 
 # =============================================================================
-# Loading Data and Modelling it. 
+# Loading Data and Modelling it.
 # =============================================================================
 
-# Put your own path for reading the Excel file. 
-modelling_data = pd.read_excel(r'C:\Users\Antonio Prgomet\Documents\YouTube\python\streamlit_demonstration\modelling_data.xlsx')
+# Put your own path for reading the Excel file.
+modelling_data = pd.read_excel(r'C:\Users\hugom\SKOLA\pythonUppgifter\pythonUppgifter\streamlit\modelling_data.xlsx')
 
 x = np.array(modelling_data[["x"]])
 y = np.array(modelling_data[["y"]])
 
-# Plotting the data. 
+# Plotting the data.
 fig_data, ax_data = plt.subplots(figsize=(8,4))
 ax_data.set_title('Data')
 ax_data.scatter(modelling_data["x"], modelling_data["y"])
@@ -32,7 +32,7 @@ ax_data.set_ylabel('y')
 lin_reg = LinearRegression()
 lin_reg.fit(x, y)
 
-# Creating new data that we will predict with our fitted model. 
+# Creating new data that we will predict with our fitted model.
 x_new = np.linspace(0, 2, 20).reshape(-1, 1)
 y_pred_lr = lin_reg.predict(x_new)
 
